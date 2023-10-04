@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Bedelli Yazılım Keywords Scraper",
+  "version": "1.0",
+  "description": "Scrape keywords from Google Ads",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://ads.google.com/aw/keywords*"],
+      "js": ["content.js"]
+    }
+  ]
+}
